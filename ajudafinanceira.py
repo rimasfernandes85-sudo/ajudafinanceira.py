@@ -1,10 +1,9 @@
-%%writefile app.py
 import streamlit as st
 import google.generativeai as genai
 
 # Coloque a sua chave copiada dentro das aspas abaixo
 CHAVE_API = "AQ.Ab8RN6IrQFGAd7K-5V1MaCgvEo77ONlU8r4NEYFL9Z7kBmTAkA"
-genai.configure(api_key=CHAVE_API)
+CHAVE_API = st.secrets["GEMINI_API_KEY"]
 
 st.title("🤝 Assistente de Orientação Financeira Ética")
 st.write("Insira seus dados abaixo para receber orientações baseadas nos decretos vigentes.")
